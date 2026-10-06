@@ -79,5 +79,5 @@ def response_generator():
 
 # Display assistant response (indented, so it only runs after you send a message)
 with st.chat_message("assistant"):
-response = st.write_stream(response_generator())
-st.session_state.messages.append({"role": "assistant", "content": response})
+    response = st.write_stream(response_generator())
+    st.session_state.messages.append({"role": "assistant", "content": response})

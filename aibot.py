@@ -49,7 +49,7 @@ def ai_ask(prompt, data=None, temperature=0.5, max_tokens=250, model="mistral-sm
     except Exception as e:
         return f"Error: {str(e)}"
 
-st.title("Alex_Bui_Ai chat")
+st.title("Alex_Bui_Aibot")
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -75,7 +75,6 @@ def response_generator():
     for word in response.split():
         yield word + " "
         time.sleep(0.05)
-
 
 # Display assistant response in chat message container
 with st.chat_message("assistant"):

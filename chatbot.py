@@ -33,3 +33,10 @@ def response_generator():
     for word in response.split():
         yield word + " "
         time.sleep(0.05)
+
+# Display assistant response in chat message container
+with st.chat_message("assistant"):
+    response = st.write_stream(response_generator())
+
+# Add assistant response to chat history
+st.session_state.messages.append({"role": "assistant", "content": response})

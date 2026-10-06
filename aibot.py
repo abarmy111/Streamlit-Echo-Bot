@@ -49,25 +49,6 @@ def ai_ask(prompt, data=None, temperature=0.5, max_tokens=250, model="mistral-sm
     except Exception as e:
         return f"Error: {str(e)}"
 
-st.title("Alex_Bui_Aibot")
-
-# Initialize chat history
-if "messages" not in st.session_state:
-    st.session_state.messages = []
-
-# Display chat messages from history on app rerun
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
-
-# Accept user input
-if prompt := st.chat_input("What is up?"):
-    # Display user message in chat message container
-    with st.chat_message("user"):
-        st.markdown(prompt)
-    # Add user message to chat history
-    st.session_state.messages.append({"role": "user", "content": prompt})
-
 def response_generator():
     response = ai_ask("Pretend you are a very friendly and helpful person.  Please provide a response given the provided context.  Please provide the response only with no before or after commentary.",
                       data=st.session_state.messages,                      

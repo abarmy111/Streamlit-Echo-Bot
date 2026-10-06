@@ -80,7 +80,7 @@ if prompt := st.chat_input("What is up?"):
      for word in response.split():
          yield word + " "
          time.sleep(0.05)
-
+         
 # Display assistant response in chat message container
 with st.chat_message("assistant"):
     response = st.write_stream(response_generator())

@@ -3,7 +3,7 @@ import streamlit as st
 st.title("Alex_Bui_Echo Bot")
 
 with st.chat_message("assistant"):
-    st.image(“PowerBI.png", caption="CIT 144 – Demographics Data Visualization")
+    st.image("PowerBI.png", caption="CIT 144 – Demographics Data Visualization")
 
 
 # Initialize chat history

@@ -2,6 +2,10 @@ import streamlit as st
 
 st.title("Alex_Bui_Echo Bot")
 
+with st.chat_message("assistant"):
+    st.image(“PowerBI.png", caption="CIT 144 – Demographics Data Visualization")
+
+
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
